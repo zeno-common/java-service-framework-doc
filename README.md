@@ -1,7 +1,7 @@
 # SDK Documentation Index
 
 > Java 服务端开发脚手架 (java-service-framework) 公共库 SDK 文档。
-> 本文档供 AI Agent 在代码生成时查阅，快速了解可用的类及其用途。
+> 本文档供 AI Agent 在代码生成时查阅，快速了解可用的类及其用途。1
 
 ---
 
