@@ -1,6 +1,10 @@
 # Import Dependency
 > 本文档供 AI Agent 在代码生成时查阅，了解项目和模块及其用途。
 > Java 服务端开发脚手架 (java-service-framework) 公共库 SDK 文档。
+
+版本：0.0.1
+
+Last Updated: 2026-06-17
 ---
 
 ## Maven 依赖引入
@@ -111,7 +115,7 @@
 
 | Class | Package | Description | Doc |
 |-------|---------|-------------|-----|
-| `IpUtil` | `io.soil.util.ip` | 获取本地连接 IP 地址 | [IpUtil](jsf-common/jsf-util/io.soil.util.ip/IpUtil.md) |
+| `IpUtil` | `io.soil.util.ip` | 获取与指定远程IP端口连接的本地IP地址 | [IpUtil](jsf-common/jsf-util/io.soil.util.ip/IpUtil.md) |
 
 #### io.soil.util.jdbc — JDBC 分页
 
