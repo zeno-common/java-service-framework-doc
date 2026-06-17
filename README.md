@@ -1,9 +1,6 @@
 # Import Dependency
 > 本文档供 AI Agent 在代码生成时查阅，了解项目和模块及其用途。
 > Java 服务端开发脚手架 (java-service-framework) 公共库 SDK 文档。
-版本：0.0.1
-
-*Last Updated: 2026-06-17*
 ---
 
 ## Maven 依赖引入
