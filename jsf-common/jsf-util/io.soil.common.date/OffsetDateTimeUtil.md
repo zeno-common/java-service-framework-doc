@@ -66,6 +66,8 @@
 |-------|------|-------------|
 | `time` | `Temporal` | ISO 8601 格式日期时间字符串 |
 
+throws `UnsupportedOperationException` — 不支持的 Temporal 类型时抛出
+
 ---
 
 ### `static String toString(Temporal time)`

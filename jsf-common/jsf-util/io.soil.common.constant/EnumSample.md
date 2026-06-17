@@ -30,10 +30,10 @@
 
 → **EnumSample** — 枚举对象
 
-根据状态值获取枚举对象
-
-throws `UnknownEnumException` — 当无法匹配到对应的枚举时抛出
+根据 状态值 获取枚举对象
 
 | Param | Type | Description |
 |-------|------|-------------|
 | `status` | `int` | 状态值 |
+
+throws `UnknownEnumException` — 当状态值无匹配枚举时抛出

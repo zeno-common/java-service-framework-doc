@@ -10,9 +10,22 @@ extends `BaseException`
 
 ---
 
+## Constructors
+
+### `UnknownEnumException(Object status, Class<? extends Enum> enumClazz)`
+
+构造未知枚举异常
+
+| Param | Type | Description |
+|-------|------|-------------|
+| `status` | `Object` | 无法匹配的状态值 |
+| `enumClazz` | `Class<? extends Enum>` | 枚举类对象 |
+
+---
+
 ## Methods
 
-### `String module()`
+### `protected String module()`
 
 → **String** — 模块名
 

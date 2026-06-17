@@ -8,8 +8,18 @@
 
 可用于构建任意层级的树形结构，每个节点包含ID、名称、类型、父节点引用及子节点列表。
 
-- **Type Parameters:** `<ID>` — 节点标识类型, `<TYPE>` — 节点类型类型
+- **Type Parameters:**
+  - `<ID>` — 节点标识类型
+  - `<TYPE>` — 节点类型类型
 - **Author:** zeno.w
+
+---
+
+## Constructors
+
+### `Node()`
+
+*(No description provided)*
 
 ---
 

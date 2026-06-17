@@ -1,14 +1,13 @@
-# SDK Documentation Index
-
+# Import Dependency
+> 本文档供 AI Agent 在代码生成时查阅，了解项目和模块及其用途。
 > Java 服务端开发脚手架 (java-service-framework) 公共库 SDK 文档。
-> 本文档供 AI Agent 在代码生成时查阅，快速了解可用的类及其用途。1
-
+> 版本：0.0.1
+*Last Updated: 2026-06-17*
 ---
 
 ## Maven 依赖引入
 
 通过 `jsf-bom` 统一管理版本，支持以下两种方式：
-
 ### 方式一：继承 jsf-parent（推荐）
 
 在启动项目 `pom.xml` 中将 `jsf-parent` 设为父 POM，自动继承所有依赖版本管理：
@@ -21,9 +20,10 @@
 </parent>
 ```
 
+---
 ### 方式二：导入 jsf-dependencies BOM
 
-若项目已有父 POM，可在 `dependencyManagement` 中导入 BOM;：
+非启动项目中，若已有父 POM，可在 `dependencyManagement` 中导入 BOM, 否则将 BOM 设置父 POM ;：
 
 ```xml
 <dependencyManagement>
@@ -43,6 +43,7 @@
 
 ---
 
+# SDK Documentation Index
 ## 模块概览
 
 | Module | ArtifactId | Description |
@@ -54,9 +55,11 @@
 
 ## 类索引
 
-> 按模块 → 包分组，每个类附一行功能描述和文档链接，方便 AI Agent 快速定位所需类。
+> 按模块 → 包分组，每个类附一行功能描述和文档链接。
 
 ### jsf-pojo — 通用 POJO/DTO
+
+#### com.skylink.pojo.dto — 数据传输对象
 
 | Class | Package | Description | Doc |
 |-------|---------|-------------|-----|
@@ -117,7 +120,7 @@
 | Class | Package | Description | Doc |
 |-------|---------|-------------|-----|
 | `JsfUrlParamConst` | `io.soil.util.jdbc` | REST API 分页/排序 URL 参数常量 | [JsfUrlParamConst](jsf-common/jsf-util/io.soil.util.jdbc/JsfUrlParamConst.md) |
-| `JsfUrlParameter` | `io.soil.util.jdbc` | 从 HTTP 请求提取分页、排序参数 | [JsfUrlParameter](jsf-common/jsf-util/io.soil.util.jdbc/JsfUrlParameter.md) |
+| `JsfUrlParams` | `io.soil.util.jdbc` | 从 HTTP 请求提取分页、排序参数 | [JsfUrlParams](jsf-common/jsf-util/io.soil.util.jdbc/JsfUrlParams.md) |
 | `JsfPagingUtil` | `io.soil.util.jdbc` | 基于 URL 参数的 PageHelper 分页工具 | [JsfPagingUtil](jsf-common/jsf-util/io.soil.util.jdbc/JsfPagingUtil.md) |
 | `JsfUrlParamsPage<T>` | `io.soil.util.jdbc` | MyBatis-Flex 分页对象，继承 Page | [JsfUrlParamsPage](jsf-common/jsf-util/io.soil.util.jdbc/JsfUrlParamsPage.md) |
 
@@ -139,11 +142,9 @@
 
 AI Agent 在代码生成时遵循以下流程：
 
-1. **需求匹配** — 根据功能需求从上方「类索引」中查找对应类（如需要分页 → `JsfPagingUtil` / `PagedResult`）
+1. **需求匹配** — 根据功能需求从上方「类索引」中查找对应类
 2. **查阅详情** — 点击 Doc 链接进入类的完整 API 文档，了解方法签名、参数和返回值
 3. **引入依赖** — 从「Maven 依赖引入」复制对应 `artifactId` 的依赖坐标到 `pom.xml`
 4. **编写代码** — 根据文档中的方法签名和参数说明生成正确的调用代码
 
 ---
-
-*Last Updated: 2026-06-17*

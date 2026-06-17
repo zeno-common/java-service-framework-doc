@@ -65,11 +65,3 @@
 | `total` | `int` | 总数 |
 | `items` | `Collection<T>` | 分页列表，为null时自动替换为空列表 |
 | `<T>` | | 分页数据的元素类型 |
-
----
-
-## Constants
-
-| Name | Type | Value | Description |
-|------|------|-------|-------------|
-| *(No public constants)* | | | |
