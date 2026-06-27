@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "jsf-bom-doc",
+      "type": "skill-md",
+      "description": "Use when coding with jsf-bom, need reference for Maven BOM/parent POM configuration, dependency version management, multi-environment profiles, or Docker build setup.",
+      "url": "skills/jsf-bom-doc/SKILL.md",
+      "digest": "sha256:c1863e205a5b8b57c05db119135c19172264f4c4d5f2196a66539cf49b230ce0"
+    },
+    {
+      "name": "jsf-pojo-doc",
+      "type": "skill-md",
+      "description": "Use when coding with jsf-pojo SDK, need API reference for paged result DTO and common POJO definitions.",
+      "url": "skills/jsf-pojo-doc/SKILL.md",
+      "digest": "sha256:0440d074157c9d9d38d160f29958de8ca00d3e3cb422da9e4207a251aadb3222"
+    },
+    {
+      "name": "jsf-util-doc",
+      "type": "skill-md",
+      "description": "Use when coding with jsf-util SDK, need API reference for URL paging, JSON mapping, date/time, tree structure, collection utils, IP lookup, Spring context, or exception base class.",
+      "url": "skills/jsf-util-doc/SKILL.md",
+      "digest": "sha256:ae4f76108982a96547e86b551e4c0c3e5b07c7da2b5ae2109a1611c351a46bdb"
+    },
+    {
+      "name": "jsf-waf-doc",
+      "type": "skill-md",
+      "description": "Use when coding with jsf-waf SDK, need API reference for WAF framework, exception handling, Jackson config, health probe, or client IP resolution.",
+      "url": "skills/jsf-waf-doc/SKILL.md",
+      "digest": "sha256:6d0aa48ee18744983e9a73977379f06b642be92618f5d3f570a3e6a7d0286963"
+    }
+  ]
+}
