@@ -81,20 +81,19 @@ WAF（Web Application Framework）基于 Spring Boot 的 Web 应用框架：
 ## 目录结构
 
 ```
-docs/jsf-skills/
-├── index.json          # Skills 注册表（agent-skills 0.2.0 discovery spec）
-├── README.md
-└── skills/
-    ├── jsf-bom-doc/
-    │   ├── SKILL.md
-    │   └── references/
-    ├── jsf-pojo-doc/
-    │   ├── SKILL.md
-    │   └── references/
-    ├── jsf-util-doc/
-    │   ├── SKILL.md
-    │   └── references/
-    └── jsf-waf-doc/
-        ├── SKILL.md
-        └── references/
+index.json          # Skills 注册表（agent-skills 0.2.0 discovery spec）
+README.md
+skills/
+├── jsf-bom-doc/
+│   ├── SKILL.md
+│   └── references/
+├── jsf-pojo-doc/
+│   ├── SKILL.md
+│   └── references/
+├── jsf-util-doc/
+│   ├── SKILL.md
+│   └── references/
+└── jsf-waf-doc/
+    ├── SKILL.md
+    └── references/
 ```
