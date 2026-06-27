@@ -1,4 +1,4 @@
-﻿# jsf-dependencies
+# jsf-dependencies
 
 > JSF 框架聚合 BOM，统一管理所有第三方依赖版本与插件配置
 

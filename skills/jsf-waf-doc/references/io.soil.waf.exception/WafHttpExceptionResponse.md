@@ -1,4 +1,4 @@
-﻿# WafHttpExceptionResponse
+# WafHttpExceptionResponse
 
 > WAF 异常响应内容，用于封装异常信息返回给客户端
 

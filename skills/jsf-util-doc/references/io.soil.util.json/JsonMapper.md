@@ -1,4 +1,4 @@
-﻿# JsonMapper
+# JsonMapper
 
 > JSON 映射工具类，封装 Jackson ObjectMapper 提供对象与 JSON 之间的序列化/反序列化操作
 

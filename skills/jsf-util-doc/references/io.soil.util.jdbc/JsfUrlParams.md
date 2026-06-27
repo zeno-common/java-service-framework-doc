@@ -1,4 +1,4 @@
-﻿# JsfUrlParams
+# JsfUrlParams
 
 > JSF URL 参数工具类，从 HTTP 请求中提取分页、排序、偏移等 URL 参数
 

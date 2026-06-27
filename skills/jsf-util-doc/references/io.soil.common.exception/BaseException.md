@@ -1,4 +1,4 @@
-﻿# BaseException
+# BaseException
 
 > 异常基类，提供消息模板格式化和异常栈字符串获取能力
 

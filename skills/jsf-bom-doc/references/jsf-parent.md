@@ -1,4 +1,4 @@
-﻿# jsf-parent
+# jsf-parent
 
 > JSF 框架父 POM，为业务项目提供统一构建配置和多环境 Profile 管理
 

@@ -1,4 +1,4 @@
-﻿# JsfUrlParamsPage
+# JsfUrlParamsPage
 
 > 基于 URL 参数的 MyBatis-Flex 分页对象，继承 Page
 

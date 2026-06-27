@@ -1,4 +1,4 @@
-﻿# FunctionWithParam
+# FunctionWithParam
 
 > 带一个额外参数的函数式接口，扩展标准 Function 以支持额外参数传递
 

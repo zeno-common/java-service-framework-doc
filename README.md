@@ -1,4 +1,4 @@
-﻿# JSF Skills
+# JSF Skills
 
 JSF（Java Service Framework）Agent Skills 集合，为 AI 编码助手提供框架 SDK 参考、依赖管理和编码规范。
 

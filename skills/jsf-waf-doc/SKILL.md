@@ -1,4 +1,4 @@
-﻿---
+---
 name: "jsf-waf-doc"
 description: "Use when coding with jsf-waf SDK, need API reference for WAF framework, exception handling, Jackson config, health probe, or client IP resolution."
 ---

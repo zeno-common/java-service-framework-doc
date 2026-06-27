@@ -1,4 +1,4 @@
-﻿# UnknownEnumException
+# UnknownEnumException
 
 > 未知枚举类型异常，当根据状态值无法匹配到对应枚举时抛出
 

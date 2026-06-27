@@ -1,4 +1,4 @@
-﻿# DateTimeConst
+# DateTimeConst
 
 > 日期时间常量类
 

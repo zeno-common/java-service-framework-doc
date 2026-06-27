@@ -1,4 +1,4 @@
-﻿---
+---
 name: "jsf-bom-doc"
 description: "Use when coding with jsf-bom, need reference for Maven BOM/parent POM configuration, dependency version management, multi-environment profiles, or Docker build setup."
 ---

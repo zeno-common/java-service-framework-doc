@@ -1,4 +1,4 @@
-﻿# WafHttpExceptionResolver
+# WafHttpExceptionResolver
 
 > WAF 全局异常处理器，自动捕获并处理 Web 层异常
 

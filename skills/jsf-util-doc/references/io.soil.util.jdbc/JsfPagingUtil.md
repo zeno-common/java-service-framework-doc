@@ -1,4 +1,4 @@
-﻿# JsfPagingUtil
+# JsfPagingUtil
 
 > JSF 分页工具类，基于 REST API 规约的 URL 参数进行 PageHelper 分页处理
 

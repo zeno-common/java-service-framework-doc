@@ -1,4 +1,4 @@
-﻿# PagedResult
+# PagedResult
 
 > 分页结果响应体，封装分页查询的返回结果
 

@@ -1,4 +1,4 @@
-﻿# EnumSample
+# EnumSample
 
 > 枚举定义参考示例，展示 JSF 枚举的标准定义模式
 

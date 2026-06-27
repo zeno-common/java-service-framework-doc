@@ -1,4 +1,4 @@
-﻿---
+---
 name: "jsf-util-doc"
 description: "Use when coding with jsf-util SDK, need API reference for URL paging, JSON mapping, date/time, tree structure, collection utils, IP lookup, Spring context, or exception base class."
 ---

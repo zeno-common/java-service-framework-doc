@@ -1,4 +1,4 @@
-﻿# ApplicationContextUtil
+# ApplicationContextUtil
 
 > Spring ApplicationContext 工具类，提供在非 Spring 管理的类中获取 Bean 的能力
 

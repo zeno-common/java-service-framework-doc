@@ -1,4 +1,4 @@
-﻿# JsfUrlParamConst
+# JsfUrlParamConst
 
 > JSF URL 参数常量类，定义 REST API 规约中分页、排序、偏移等 URL 参数名称
 

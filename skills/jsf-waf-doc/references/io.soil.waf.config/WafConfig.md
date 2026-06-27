@@ -1,4 +1,4 @@
-﻿# WafConfig
+# WafConfig
 
 > WAF 配置类，配置 Jackson 序列化/反序列化规则和组件扫描
 

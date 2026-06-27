@@ -1,4 +1,4 @@
-﻿---
+---
 name: "jsf-pojo-doc"
 description: "Use when coding with jsf-pojo SDK, need API reference for paged result DTO and common POJO definitions."
 ---

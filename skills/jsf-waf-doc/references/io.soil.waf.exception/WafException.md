@@ -1,4 +1,4 @@
-﻿# WafException
+# WafException
 
 > WAF 异常类，继承 BaseException，支持 HTTP 状态码和自定义错误码
 

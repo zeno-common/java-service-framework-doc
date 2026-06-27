@@ -1,4 +1,4 @@
-﻿# FunctionWith3Param
+# FunctionWith3Param
 
 > 带三个额外参数的函数式接口
 

@@ -1,4 +1,4 @@
-﻿# CollectionUtil
+# CollectionUtil
 
 > 集合工具类，提供集合转换、映射等常用操作
 

@@ -1,4 +1,4 @@
-﻿# FunctionWith2Param
+# FunctionWith2Param
 
 > 带两个额外参数的函数式接口
 

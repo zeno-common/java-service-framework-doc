@@ -1,4 +1,4 @@
-﻿# ProbeController
+# ProbeController
 
 > 健康探针控制器，提供应用活跃状态检测接口
 
