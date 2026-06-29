@@ -16,8 +16,6 @@
 </parent>
 ```
 
-继承后**无需**再导入 `jsf-dependencies` BOM，也**无需**重复声明 Java 版本与编码。
-
 ## 多环境 Profile
 
 通过 `-P <profileId>` 激活对应环境，设置 `env` 属性供资源过滤与 Docker 镜像 Tag 使用。

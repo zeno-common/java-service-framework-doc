@@ -1,7 +1,5 @@
 # 依赖速查表
 
-> 引入 BOM/父 POM 后，声明具体依赖时**必须省略 `<version>` 标签**。
-
 ## JSF 内部模块
 
 | 功能 | groupId | artifactId | 版本 |
