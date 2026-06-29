@@ -2,7 +2,7 @@
 
 > 分页结果响应体，封装分页查询的返回结果
 
-- **包**: com.skylink.pojo.dto
+- **包**: io.soil.pojo.dto
 - **泛型**: `<T>` 分页数据的元素类型
 - **Lombok**: `@Data` — 所有字段均有 getter/setter [Lombok 生成]
 

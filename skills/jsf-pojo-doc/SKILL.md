@@ -19,4 +19,4 @@ JSF 通用 POJO/DTO 模块，提供分页结果封装等基础数据结构。
 
 | 类 | 包 | 说明 | 文档 |
 |----|-----|------|------|
-| `PagedResult` | com.skylink.pojo.dto | 分页结果响应体 | [PagedResult](references/com.skylink.pojo.dto/PagedResult.md) |
+| `PagedResult` | io.soil.pojo.dto | 分页结果响应体 | [PagedResult](./references/io.soil.pojo.dto/PagedResult.md) |
