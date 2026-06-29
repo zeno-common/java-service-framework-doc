@@ -35,7 +35,6 @@
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| Hutool (BOM) | `cn.hutool` | `hutool-bom` | 5.8.35 |
 | Jackson | `com.fasterxml.jackson.core` | `jackson-databind` | 2.18.4 |
 | Caffeine 缓存 | `com.github.ben-manes.caffeine` | `caffeine` | 3.2.0 |
 | MapStruct-Plus | `io.github.linpeilie` | `mapstruct-plus-spring-boot-starter` | 1.4.8 |
@@ -43,16 +42,12 @@
 | Commons IO | `commons-io` | `commons-io` | 2.19.0 |
 | Lombok | `org.projectlombok` | `lombok` | 1.18.46 |
 
-## 认证 / 加密 / 第三方
+## 消息 / 链路 / 其他
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| Sa-Token | `cn.dev33` | `sa-token-spring-boot3-starter` | 1.44.0 |
-| Sa-Token JWT | `cn.dev33` | `sa-token-jwt` | 1.44.0 |
-| Bouncy Castle | `org.bouncycastle` | `bcprov-jdk15to18` | 1.80 |
-| JustAuth 第三方登录 | `me.zhyd.oauth` | `JustAuth` | 1.16.7 |
-| AWS S3 SDK | `software.amazon.awssdk` | `s3` | 2.28.22 |
-| SMS4J 短信 | `org.dromara.sms4j` | `sms4j-spring-boot-starter` | 3.3.4 |
 | RocketMQ | `org.apache.rocketmq` | `rocketmq-spring-boot-starter` | 2.3.0 |
 | SkyWalking 链路 | `org.apache.skywalking` | `apm-toolkit-trace` | 9.3.0 |
 | IP2Region | `org.lionsoul` | `ip2region` | 2.7.0 |
+| FastJSON | `com.alibaba` | `fastjson` | 1.2.83 |
+| Logstash Logback | `net.logstash.logback` | `logstash-logback-encoder` | 7.2 |

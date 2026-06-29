@@ -77,7 +77,6 @@
 
 | groupId | artifactId | 版本 |
 |---------|-----------|------|
-| `cn.hutool` | `hutool-bom` | 5.8.35 |
 | `org.lionsoul` | `ip2region` | 2.7.0 |
 | `io.github.linpeilie` | `mapstruct-plus-spring-boot-starter` | 1.4.8 |
 | `com.fasterxml.jackson.core` | `jackson-core` / `jackson-annotations` / `jackson-databind` | 2.18.4 |
@@ -94,20 +93,11 @@
 | groupId | artifactId | 版本 | 用途 |
 |---------|-----------|------|------|
 | `org.projectlombok` | `lombok` | 1.18.46 | 代码简化（provided） |
-| `cn.dev33` | `sa-token-core` | 1.44.0 | 权限认证核心 |
-| `cn.dev33` | `sa-token-spring-boot3-starter` | 1.44.0 | Sa-Token Boot3 启动器 |
-| `cn.dev33` | `sa-token-jwt` | 1.44.0 | Sa-Token JWT 扩展 |
-| `cn.dev33` | `sa-token-dubbo3` | 1.44.0 | Sa-Token Dubbo3 集成 |
-| `org.bouncycastle` | `bcprov-jdk15to18` | 1.80 | 加密库 |
-| `me.zhyd.oauth` | `JustAuth` | 1.16.7 | 第三方登录 |
 | `org.apache.skywalking` | `apm-toolkit-logback-1.x` | 9.3.0 | 链路追踪日志整合 |
 | `org.apache.skywalking` | `apm-toolkit-trace` | 9.3.0 | 链路追踪 |
-| `software.amazon.awssdk` | `s3` | 2.28.22 | AWS S3 对象存储 |
-| `software.amazon.awssdk` | `s3-transfer-manager` | 2.28.22 | S3 传输管理 |
-| `software.amazon.awssdk` | `netty-nio-client` | 2.28.22 | Netty HTTP 客户端 |
-| `org.dromara.sms4j` | `sms4j-spring-boot-starter` | 3.3.4 | 短信服务 |
+| `org.lionsoul` | `ip2region` | 2.7.0 | 离线 IP 地址定位 |
 | `com.alibaba` | `fastjson` | 1.2.83 | JSON 解析（漏洞修复版） |
-| `redis.clients` | `jedis` | 5.1.0 | Dubbo 专用 Redis 客户端 |
+| `io.github.linpeilie` | `mapstruct-plus-spring-boot-starter` | 1.4.8 | Dubbo 专用对象映射 |
 | `org.apache.rocketmq` | `rocketmq-spring-boot-starter` | 2.3.0 | 消息队列 |
 | `net.logstash.logback` | `logstash-logback-encoder` | 7.2 | 日志推送 |
 
