@@ -1,11 +1,17 @@
 # 依赖速查表
 
-## JSF 内部模块
+## JSF 通用模块（jsf-common）
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
 | 通用 POJO/DTO | `io.soil.jsf` | `jsf-pojo` | 0.0.1 |
 | 通用工具类 | `io.soil.jsf` | `jsf-util` | 0.0.1 |
+| 单元测试工具 | `io.soil.jsf` | `jsf-unit-test` | 0.0.1 |
+
+## JSF 组件模块（jsf-components）
+
+| 功能 | groupId | artifactId | 版本 |
+|------|---------|-----------|------|
 | Web Service Framework | `io.soil.jsf` | `jsf-wsf` | 0.0.1 |
 | 分布式唯一 ID | `io.soil.jsf` | `jsf-leaf-id` | 0.0.1 |
 | MongoDB 通用类 | `io.soil.jsf` | `jsf-mongodb` | 0.0.1 |

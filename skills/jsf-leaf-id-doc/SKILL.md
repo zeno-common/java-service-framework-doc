@@ -42,7 +42,7 @@ long id = LeafId.nextId();
 
 | 配置项 | 默认值 | 说明 |
 |--------|--------|------|
-| `gaea.leaf.holder-type` | `default` | `default`（静态 workerId）/ `jdbc`（数据库协调） |
+| `jsf.leaf.holder-type` | `default` | `default`（静态 workerId）/ `jdbc`（数据库协调） |
 | `jsf.leaf.data-center-id` | `0` | 数据中心 ID，范围 0 ~ 31（5 bit） |
 | `jsf.leaf.worker-id` | `0` | 静态模式的 workerId，范围 0 ~ 255（8 bit） |
 | `jsf.leaf.ip-coordinator.ip` | - | JDBC 模式：远程目标 IP，用于探测本机出口 IP |

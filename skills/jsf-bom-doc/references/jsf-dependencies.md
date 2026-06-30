@@ -55,7 +55,15 @@
 |---------|-----------|------|
 | `io.soil.jsf` | `jsf-pojo` | 0.0.1 |
 | `io.soil.jsf` | `jsf-util` | 0.0.1 |
+| `io.soil.jsf` | `jsf-unit-test` | 0.0.1 |
+
+### JSF 组件模块（经 jsf-components-dependencies）
+
+| groupId | artifactId | 版本 |
+|---------|-----------|------|
 | `io.soil.jsf` | `jsf-wsf` | 0.0.1 |
+| `io.soil.jsf` | `jsf-leaf-id` | 0.0.1 |
+| `io.soil.jsf` | `jsf-mongodb` | 0.0.1 |
 
 ### 数据库 / ORM（经 jsf-jdbc-dependencies）
 
