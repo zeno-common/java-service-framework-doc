@@ -2,7 +2,7 @@
 
 > JSF 框架父 POM，为业务项目提供统一构建配置和多环境 Profile 管理
 
-- **GAV**: `io.soil:jsf-parent:0.0.1`
+- **GAV**: `io.soil.jsf:jsf-parent:0.0.1`
 - **Packaging**: pom
 - **继承链**: 业务项目 → `jsf-parent` → `jsf-dependencies`（聚合 BOM）
 
@@ -95,7 +95,7 @@ mvn clean package -P d-prod
     </dependency>
     <dependency>
       <groupId>io.soil.jsf</groupId>
-      <artifactId>jsf-waf</artifactId>
+      <artifactId>jsf-wsf</artifactId>
     </dependency>
   </dependencies>
 </project>

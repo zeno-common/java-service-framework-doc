@@ -23,11 +23,11 @@
       "digest": "sha256:f0061b7ca1e2878844aaa6388fbfbb1f5d6910e01bed83fc0aefb93339dd512b"
     },
     {
-      "name": "jsf-waf-doc",
+      "name": "jsf-wsf-doc",
       "type": "skill-md",
-      "description": "Use when coding with jsf-waf SDK, need API reference for WAF framework, exception handling, Jackson config, health probe, or client IP resolution.",
-      "url": "skills/jsf-waf-doc/SKILL.md",
-      "digest": "sha256:d94293f3819c60407f6675de14612e455f0151a63aa259540493ad9e33582087"
+      "description": "Use when coding with jsf-wsf SDK, need API reference for WSF framework, exception handling, Jackson config, health probe, or client IP resolution.",
+      "url": "skills/jsf-wsf-doc/SKILL.md",
+      "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
     }
   ]
 }

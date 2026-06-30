@@ -2,7 +2,7 @@
 
 > JSF 框架聚合 BOM，统一管理所有第三方依赖版本与插件配置
 
-- **GAV**: `io.soil:jsf-dependencies:0.0.1`
+- **GAV**: `io.soil.jsf:jsf-dependencies:0.0.1`
 - **Packaging**: pom
 
 ## 继承链
@@ -53,9 +53,9 @@
 
 | groupId | artifactId | 版本 |
 |---------|-----------|------|
-| `io.soil` | `jsf-pojo` | 0.0.1 |
-| `io.soil` | `jsf-util` | 0.0.1 |
-| `io.soil` | `jsf-waf` | 0.0.1 |
+| `io.soil.jsf` | `jsf-pojo` | 0.0.1 |
+| `io.soil.jsf` | `jsf-util` | 0.0.1 |
+| `io.soil.jsf` | `jsf-wsf` | 0.0.1 |
 
 ### 数据库 / ORM（经 jsf-jdbc-dependencies）
 

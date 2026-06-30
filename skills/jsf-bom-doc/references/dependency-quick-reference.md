@@ -4,9 +4,11 @@
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| 通用 POJO/DTO | `io.soil` | `jsf-pojo` | 0.0.1 |
-| 通用工具类 | `io.soil` | `jsf-util` | 0.0.1 |
-| Web 应用框架 | `io.soil` | `jsf-waf` | 0.0.1 |
+| 通用 POJO/DTO | `io.soil.jsf` | `jsf-pojo` | 0.0.1 |
+| 通用工具类 | `io.soil.jsf` | `jsf-util` | 0.0.1 |
+| Web Service Framework | `io.soil.jsf` | `jsf-wsf` | 0.0.1 |
+| 分布式唯一 ID | `io.soil.jsf` | `jsf-leaf-id` | 0.0.1 |
+| MongoDB 通用类 | `io.soil.jsf` | `jsf-mongodb` | 0.0.1 |
 
 ## Spring 生态
 
