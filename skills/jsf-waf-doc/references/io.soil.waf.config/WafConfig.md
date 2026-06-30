@@ -30,5 +30,5 @@
 **示例**:
 ```java
 // WafConfig 通过 @Configuration 自动注册，无需手动使用
-// 引入 jsf-waf 依赖后，Jackson 序列化规则自动生效
+// 引入 jsf-wsf 依赖后，Jackson 序列化规则自动生效
 ```

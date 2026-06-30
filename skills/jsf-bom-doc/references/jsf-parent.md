@@ -10,7 +10,7 @@
 
 ```xml
 <parent>
-  <groupId>io.soil</groupId>
+  <groupId>io.soil.jsf</groupId>
   <artifactId>jsf-parent</artifactId>
   <version>0.0.1</version>
 </parent>
@@ -80,7 +80,7 @@ mvn clean package -P d-prod
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.soil</groupId>
+    <groupId>io.soil.jsf</groupId>
     <artifactId>jsf-parent</artifactId>
     <version>0.0.1</version>
   </parent>
@@ -90,11 +90,11 @@ mvn clean package -P d-prod
 
   <dependencies>
     <dependency>
-      <groupId>io.soil</groupId>
+      <groupId>io.soil.jsf</groupId>
       <artifactId>jsf-util</artifactId>
     </dependency>
     <dependency>
-      <groupId>io.soil</groupId>
+      <groupId>io.soil.jsf</groupId>
       <artifactId>jsf-waf</artifactId>
     </dependency>
   </dependencies>
