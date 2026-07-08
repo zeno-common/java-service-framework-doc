@@ -1,4 +1,4 @@
-﻿---
+---
 name: "jsf-leaf-id-doc"
 description: "Use when coding with jsf-leaf-id SDK, need API reference for distributed unique ID generation, Snowflake ID, workerId coordination, dataCenterId, or LeafId usage."
 ---

@@ -1,4 +1,4 @@
-﻿# ExceptionType
+# ExceptionType
 
 > 异常类型枚举，用于标识异常的来源分类，对应 COLA 5 分层架构中的异常分类规则
 

@@ -1,4 +1,4 @@
-﻿# BaseException
+# BaseException
 
 > 业务异常基类，所有业务、系统、其他级异常的统一抽象父类
 
