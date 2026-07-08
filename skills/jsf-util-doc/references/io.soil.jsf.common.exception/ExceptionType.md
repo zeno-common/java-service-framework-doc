@@ -9,10 +9,10 @@
 
 | 值 | 说明 |
 |----|------|
-| `UNKNOWN` | 未知异常，用于表示未分类的异常类型 |
+| `UNDEFINED` | 未定义异常，用于表示未分类的异常类型 |
 | `BIZ` | 业务异常，Domain/App 层违反业务规则时抛出 |
 | `SYS` | 系统异常，Infrastructure 层捕获技术异常后包装抛出 |
-| `CLIENT` | 移动端导致的异常，比如 Adapter 层入参校验失败时抛出 |
+| `PARAM` | 参数校验异常，Adapter 层入参校验失败时抛出（如 `ParamException`） |
 
 ## 示例
 
