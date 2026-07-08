@@ -27,7 +27,7 @@
 
 > 获取异常类型
 
-**返回**: `ExceptionType` — 固定返回 `ExceptionType.UNKNOWN`
+**返回**: `ExceptionType` — 固定返回 `ExceptionType.UNDEFINED`
 
 ## 示例
 

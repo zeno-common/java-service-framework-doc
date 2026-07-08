@@ -4,58 +4,58 @@
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| 通用 POJO/DTO | `io.soil.jsf` | `jsf-pojo` | 0.0.1 |
-| 通用工具类 | `io.soil.jsf` | `jsf-util` | 0.0.1 |
-| 单元测试工具 | `io.soil.jsf` | `jsf-unit-test` | 0.0.1 |
+| 通用 POJO/DTO | ``io.soil.jsf`` | ``jsf-pojo`` | 0.0.1 |
+| 通用工具类 | ``io.soil.jsf`` | ``jsf-util`` | 0.0.1 |
+| Web Service Framework | ``io.soil.jsf`` | ``jsf-wsf`` | 0.0.1 |
+| 分布式唯一 ID | ``io.soil.jsf`` | ``jsf-leaf-id`` | 0.0.1 |
+| 单元测试工具 | ``io.soil.jsf`` | ``jsf-unit-test`` | 0.0.1 |
 
 ## JSF 组件模块（jsf-components）
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| Web Service Framework | `io.soil.jsf` | `jsf-wsf` | 0.0.1 |
-| 分布式唯一 ID | `io.soil.jsf` | `jsf-leaf-id` | 0.0.1 |
-| MongoDB 通用类 | `io.soil.jsf` | `jsf-mongodb` | 0.0.1 |
+| MongoDB 通用类 | ``io.soil.jsf`` | ``jsf-mongodb`` | 0.0.1 |
 
 ## Spring 生态
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| Spring Boot | `org.springframework.boot` | `spring-boot-dependencies` | 3.5.15 |
-| Spring Cloud | `org.springframework.cloud` | `spring-cloud-dependencies` | 2025.0.3 |
-| Spring Cloud Alibaba | `com.alibaba.cloud` | `spring-cloud-alibaba-dependencies` | 2025.0.0.0 |
+| Spring Boot | ``org.springframework.boot`` | ``spring-boot-dependencies`` | 3.5.15 |
+| Spring Cloud | ``org.springframework.cloud`` | ``spring-cloud-dependencies`` | 2025.0.3 |
+| Spring Cloud Alibaba | ``com.alibaba.cloud`` | ``spring-cloud-alibaba-dependencies`` | 2025.0.0.0 |
 
 ## 数据库 / ORM
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| MyBatis-Flex (Boot3) | `com.mybatis-flex` | `mybatis-flex-spring-boot3-starter` | 1.11.7 |
-| MyBatis-Flex 核心 | `com.mybatis-flex` | `mybatis-flex-core` | 1.11.7 |
-| MyBatis (Spring Boot) | `org.mybatis.spring.boot` | `mybatis-spring-boot-starter` | 3.0.4 |
-| PageHelper 分页 | `com.github.pagehelper` | `pagehelper` | 6.1.1 |
+| MyBatis-Flex (Boot3) | ``com.mybatis-flex`` | ``mybatis-flex-spring-boot3-starter`` | 1.11.7 |
+| MyBatis-Flex 核心 | ``com.mybatis-flex`` | ``mybatis-flex-core`` | 1.11.7 |
+| MyBatis (Spring Boot) | ``org.mybatis.spring.boot`` | ``mybatis-spring-boot-starter`` | 3.0.4 |
+| PageHelper 分页 | ``com.github.pagehelper`` | ``pagehelper`` | 6.1.1 |
 
 ## 缓存 / Redis
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| Redisson | `org.redisson` | `redisson-spring-boot-starter` | 3.49.0 |
+| Redisson | ``org.redisson`` | ``redisson-spring-boot-starter`` | 3.49.0 |
 
 ## 工具库
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| Jackson | `com.fasterxml.jackson.core` | `jackson-databind` | 2.18.4 |
-| Caffeine 缓存 | `com.github.ben-manes.caffeine` | `caffeine` | 3.2.0 |
-| MapStruct-Plus | `io.github.linpeilie` | `mapstruct-plus-spring-boot-starter` | 1.4.8 |
-| Commons Lang3 | `org.apache.commons` | `commons-lang3` | 3.17.0 |
-| Commons IO | `commons-io` | `commons-io` | 2.19.0 |
-| Lombok | `org.projectlombok` | `lombok` | 1.18.46 |
+| Jackson | ``com.fasterxml.jackson.core`` | ``jackson-databind`` | 2.18.4 |
+| Caffeine 缓存 | ``com.github.ben-manes.caffeine`` | ``caffeine`` | 3.2.0 |
+| MapStruct-Plus | ``io.github.linpeilie`` | ``mapstruct-plus-spring-boot-starter`` | 1.4.8 |
+| Commons Lang3 | ``org.apache.commons`` | ``commons-lang3`` | 3.17.0 |
+| Commons IO | ``commons-io`` | ``commons-io`` | 2.19.0 |
+| Lombok | ``org.projectlombok`` | ``lombok`` | 1.18.46 |
 
 ## 消息 / 链路 / 其他
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
-| RocketMQ | `org.apache.rocketmq` | `rocketmq-spring-boot-starter` | 2.3.0 |
-| SkyWalking 链路 | `org.apache.skywalking` | `apm-toolkit-trace` | 9.3.0 |
-| IP2Region | `org.lionsoul` | `ip2region` | 2.7.0 |
-| FastJSON | `com.alibaba` | `fastjson` | 1.2.83 |
-| Logstash Logback | `net.logstash.logback` | `logstash-logback-encoder` | 7.2 |
+| RocketMQ | ``org.apache.rocketmq`` | ``rocketmq-spring-boot-starter`` | 2.3.0 |
+| SkyWalking 链路 | ``org.apache.skywalking`` | ``apm-toolkit-trace`` | 9.3.0 |
+| IP2Region | ``org.lionsoul`` | ``ip2region`` | 2.7.0 |
+| FastJSON | ``com.alibaba`` | ``fastjson`` | 1.2.83 |
+| Logstash Logback | ``net.logstash.logback`` | ``logstash-logback-encoder`` | 7.2 |

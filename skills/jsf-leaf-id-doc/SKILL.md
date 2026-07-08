@@ -1,4 +1,4 @@
----
+﻿---
 name: "jsf-leaf-id-doc"
 description: "Use when coding with jsf-leaf-id SDK, need API reference for distributed unique ID generation, Snowflake ID, workerId coordination, dataCenterId, or LeafId usage."
 ---
@@ -54,36 +54,36 @@ JDBC 模式需先执行建表脚本 `script/mysql/init.sql`。
 
 ### io.soil.jsf.leaf
 
-| 类 | 说明 |
-|----|------|
-| `IDGen` | ID 生成器顶层接口 |
-| `LeafAutoConfig` | Spring Boot 自动配置，按 holder-type 注册协调器 Bean |
-| `LeafId` | 静态工具门面，提供 `nextId()` 全局入口 |
+| 类 | 说明 | 文档 |
+|----|------|------|
+| `IDGen` | ID 生成器顶层接口 | [IDGen](references/io.soil.jsf.leaf/IDGen.md) |
+| `LeafAutoConfig` | Spring Boot 自动配置，按 holder-type 注册协调器 Bean | [LeafAutoConfig](references/io.soil.jsf.leaf/LeafAutoConfig.md) |
+| `LeafId` | 静态工具门面，提供 `nextId()` 全局入口 | [LeafId](references/io.soil.jsf.leaf.gen/LeafId.md) |
 
 ### io.soil.jsf.leaf.gen
 
-| 类 | 说明 |
-|----|------|
-| `ILeafGenerator` | 工作节点协调器接口，提供 `dataCenterId()` 和 `workerId()` |
-| `LeafDefaultGenerator` | 静态 dataCenterId + workerId 协调器（默认） |
-| `LeafJdbcGenerator` | JDBC 数据库协调器，自动分配/心跳/降级恢复 |
-| `LeafIdGenImpl` | Snowflake ID 生成器核心实现（1+42+5+8+8 bit） |
+| 类 | 说明 | 文档 |
+|----|------|------|
+| `ILeafGenerator` | 工作节点协调器接口，提供 `dataCenterId()` 和 `workerId()` | [ILeafGenerator](references/io.soil.jsf.leaf.gen/ILeafGenerator.md) |
+| `LeafDefaultGenerator` | 静态 dataCenterId + workerId 协调器（默认） | [LeafDefaultGenerator](references/io.soil.jsf.leaf.gen/LeafDefaultGenerator.md) |
+| `LeafJdbcGenerator` | JDBC 数据库协调器，自动分配/心跳/降级恢复 | [LeafJdbcGenerator](references/io.soil.jsf.leaf.gen/LeafJdbcGenerator.md) |
+| `LeafIdGenImpl` | Snowflake ID 生成器核心实现（1+42+5+8+8 bit） | [LeafIdGenImpl](references/io.soil.jsf.leaf.gen/LeafIdGenImpl.md) |
 
 ### io.soil.jsf.leaf.config
 
-| 类 | 说明 |
-|----|------|
-| `LeafProperties` | 配置属性绑定（`jsf.leaf` 前缀），含 `dataCenterId` |
+| 类 | 说明 | 文档 |
+|----|------|------|
+| `LeafProperties` | 配置属性绑定（`jsf.leaf` 前缀），含 `dataCenterId` | [LeafProperties](references/io.soil.jsf.leaf.config/LeafProperties.md) |
 
 ### io.soil.jsf.leaf.exception
 
-| 类 | 说明 |
-|----|------|
-| `LeafIdException` | Leaf 异常，封装时钟回拨/workerId 越界/dataCenterId 越界/抢占失败等 |
+| 类 | 说明 | 文档 |
+|----|------|------|
+| `LeafIdException` | Leaf 异常，封装时钟回拨/workerId 越界/dataCenterId 越界/抢占失败等 | [LeafIdException](references/io.soil.jsf.leaf.exception/LeafIdException.md) |
 
 ### io.soil.jsf.leaf.mapper
 
-| 类 | 说明 |
-|----|------|
-| `LeafHolderMapper` | 工作节点 Mapper，操作 `jsf_leaf_holder` 表 |
-| `LeafHolderPO` | 工作节点 PO |
+| 类 | 说明 | 文档 |
+|----|------|------|
+| `LeafHolderMapper` | 工作节点 Mapper，操作 `jsf_leaf_holder` 表 | [LeafHolderMapper](references/io.soil.jsf.leaf.mapper/LeafHolderMapper.md) |
+| `LeafHolderPO` | 工作节点 PO | [LeafHolderPO](references/io.soil.jsf.leaf.mapper/LeafHolderPO.md) |
