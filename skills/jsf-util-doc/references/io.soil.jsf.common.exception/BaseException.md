@@ -1,15 +1,15 @@
 # BaseException
 
-> 业务异常基类，所有模块级异常的统一抽象父类
+> 业务异常基类，所有业务、系统、其他级异常的统一抽象父类
 
 - **包**: io.soil.jsf.common.exception
 - **父类**: `RuntimeException`
 - **Lombok**: `@Slf4j`
-- **抽象类** — 子类必须实现 `module()` 方法
+- **抽象类** — 子类必须实现 `type()` 方法
 
 ## 设计要点
 
-1. **异常规约**：每个业务模块从本类派生并实现 `module()` 方法，返回业务模块名称，以便在日志和监控中快速定位异常来源
+1. **异常规约**：每个业务从本类派生并实现 `type()` 方法，返回异常类型名称（业务类型、系统类型、其他类型等），以便在日志和监控中快速定位异常来源
 2. **消息格式化**：异常消息支持 `MessageFormat` 模板语法，使用 `{0}`、`{1}` 等占位符进行参数替换
 3. **异常栈输出**：`getStackTraceString()` 方法仅在 DEBUG 日志级别下返回完整异常栈，非 DEBUG 级别返回空字符串，避免生产环境输出冗余信息
 
@@ -25,13 +25,13 @@
 
 ## 方法
 
-### module
+### type
 
-`abstract String module()`
+`abstract String type()`
 
-> 获取异常模块名称，子类必须实现
+> 获取异常类型名称，类型可以是业务类型、系统类型、其他类型等
 
-**返回**: `String` — 模块名
+**返回**: `String` — 异常类型
 
 ### getStackTraceString
 
@@ -57,7 +57,7 @@
 ```java
 public class MyException extends BaseException {
     @Override
-    protected String module() { return "MY-MODULE"; }
+    protected String type() { return "BIZ"; }
 
     public MyException(String msg) { super(msg); }
     public MyException(String pattern, Object... args) { super(pattern, args); }
