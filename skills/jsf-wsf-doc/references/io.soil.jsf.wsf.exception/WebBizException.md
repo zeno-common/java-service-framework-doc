@@ -14,28 +14,28 @@
 
 ## 静态方法
 
-### rethrow
+### of
 
-`static void rethrow(HttpStatus status, BizException e)`
+`static WebBizException of(BizException e, HttpStatus status)`
 
-> 将业务异常重新包装为 Web 业务异常并抛出，保留原始异常码和消息，同时指定 HTTP 状态码
+> 将业务异常重新包装为 Web 业务异常，保留原始异常码和消息，同时指定 HTTP 状态码
 
 **参数**:
-- `status` (`HttpStatus`) — HTTP 状态码
 - `e` (`BizException`) — 原始业务异常
+- `status` (`HttpStatus`) — HTTP 状态码
+
+**返回**: `WebBizException` — 包装后的 Web 业务异常对象
 
 ## 构造
 
 | 签名 | 说明 |
 |------|------|
-| `WebBizException(String msg)` | 使用消息构造，默认 HTTP 500 |
-| `WebBizException(String msgPattern, Object... msgArgs)` | 使用消息模板构造，默认 HTTP 500 |
-| `WebBizException(HttpStatus status, String msg)` | 使用 HTTP 状态码和消息构造 |
-| `WebBizException(HttpStatus status, String msgPattern, Object... msgArgs)` | 使用 HTTP 状态码和消息模板构造 |
+| `WebBizException(HttpStatus status, String msg)` | 使用 HTTP 状态码和消息构造，code 取 status.name() |
+| `WebBizException(HttpStatus status, String msgPattern, Object... msgArgs)` | 使用 HTTP 状态码和消息模板构造，code 取 status.name() |
 | `WebBizException(String code, HttpStatus status, String msg)` | 使用自定义错误码、HTTP 状态码和消息构造 |
 | `WebBizException(String code, HttpStatus status, String msgPattern, Object... msgArgs)` | 使用自定义错误码、HTTP 状态码和消息模板构造 |
-| `WebBizException(Throwable throwable)` | 使用异常栈构造，默认 HTTP 500 |
-| `WebBizException(String code, Throwable throwable)` | 使用自定义错误码和异常栈构造 |
+| `WebBizException(Throwable throwable)` | 使用异常栈构造，默认 HTTP 500，code 取 500 状态名 |
+| `WebBizException(String code, Throwable throwable)` | 使用自定义错误码和异常栈构造，默认 HTTP 500 |
 | `WebBizException(String code, Throwable throwable, String msgPattern, Object... msgArgs)` | 使用自定义错误码、异常栈和消息模板构造，默认 HTTP 500 |
 | `WebBizException(String code, HttpStatus status, Throwable throwable, String msgPattern, Object... msgArgs)` | 全参数构造 |
 
@@ -45,7 +45,7 @@
 
 `ExceptionType type()`
 
-> 获取异常类型
+> 获取异常类型（继承自 BizException）
 
 **返回**: `ExceptionType` — 固定返回 `ExceptionType.BIZ`
 
@@ -60,9 +60,6 @@
 ## 示例
 
 ```java
-// 简单消息异常（HTTP 500）
-throw new WebBizException("操作失败");
-
 // 指定 HTTP 状态码
 throw new WebBizException(HttpStatus.BAD_REQUEST, "参数错误");
 
@@ -75,6 +72,7 @@ throw new WebBizException(HttpStatus.BAD_REQUEST, "参数 {0} 不能为空", "na
 // 包装原始异常
 throw new WebBizException("DB_ERROR", throwable);
 
-// 将 BizException 重新包装为 WebBizException 并抛出
-WebBizException.rethrow(HttpStatus.BAD_REQUEST, bizEx);
+// 将 BizException 重新包装为 WebBizException
+WebBizException wrapped = WebBizException.of(bizEx, HttpStatus.BAD_REQUEST);
+throw wrapped;
 ```
