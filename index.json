@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
   "skills": [
     {
@@ -20,14 +20,15 @@
       "type": "skill-md",
       "description": "Use when coding with jsf-util SDK, need API reference for URL paging, JSON mapping, date/time, tree structure, collection utils, IP lookup, Spring context, or exception base class.",
       "url": "skills/jsf-util-doc/SKILL.md",
-      "digest": "sha256:f0061b7ca1e2878844aaa6388fbfbb1f5d6910e01bed83fc0aefb93339dd512b"
+      "digest": "sha256:121b46ff6930b3664d5a35c21903fde328884b740c6c4fa8b32186be4b01349d"
     },
     {
       "name": "jsf-wsf-doc",
       "type": "skill-md",
       "description": "Use when coding with jsf-wsf SDK, need API reference for WSF framework, exception handling, Jackson config, health probe, or client IP resolution.",
       "url": "skills/jsf-wsf-doc/SKILL.md",
-      "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"},
+      "digest": "sha256:fa638516266f6d519da0f298bbd8f6534ae96d34362dca15b8c7405957a01247"
+    },
     {
       "name": "jsf-unit-test-doc",
       "type": "skill-md",

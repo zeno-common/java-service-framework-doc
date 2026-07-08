@@ -1,4 +1,4 @@
-# UnknownEnumException
+﻿# UnknownEnumException
 
 > 未知枚举类型异常，当根据状态值无法匹配到对应枚举时抛出
 
@@ -21,13 +21,13 @@
 
 ## 方法
 
-### module
+### type
 
-`String module()`
+`ExceptionType type()`
 
-> 获取异常模块名称
+> 获取异常类型
 
-**返回**: `String` — 固定返回 `"JSF"`
+**返回**: `ExceptionType` — 固定返回 `ExceptionType.UNKNOWN`
 
 ## 示例
 

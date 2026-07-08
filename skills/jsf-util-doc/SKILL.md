@@ -1,4 +1,4 @@
----
+﻿---
 name: "jsf-util-doc"
 description: "Use when coding with jsf-util SDK, need API reference for URL paging, JSON mapping, date/time, tree structure, collection utils, IP lookup, Spring context, or exception base class."
 ---
@@ -27,6 +27,7 @@ Maven 工程的依赖引入参考：'[jsf-bom-doc/SKILL.md](../jsf-bom-doc/SKILL
 
 | 类 | 说明 | 文档 |
 |----|------|------|
+| `ExceptionType` | 异常类型枚举，对应 COLA 5 分层架构异常分类 | [ExceptionType](references/io.soil.jsf.common.exception/ExceptionType.md) |
 | `BaseException` | 异常基类 | [BaseException](references/io.soil.jsf.common.exception/BaseException.md) |
 | `UnknownEnumException` | 未知枚举类型异常 | [UnknownEnumException](references/io.soil.jsf.common.exception/UnknownEnumException.md) |
 
