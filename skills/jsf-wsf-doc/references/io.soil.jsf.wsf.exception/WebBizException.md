@@ -1,15 +1,28 @@
 # WebBizException
 
-> Web 业务服务异常基类，继承 BaseException，用于 Web 服务业务异常抛出，支持 HTTP 状态码和自定义错误码
+> Web 业务异常，继承 BizException，在业务异常基础上额外持有 HTTP 状态码，由全局异常处理器按异常对象自带的状态码返回对应的 HTTP 响应
 
 - **包**: io.soil.jsf.wsf.exception
 - **父类**: `BizException`（io.soil.jsf.common.exception）
+- **异常类型**: `ExceptionType.BIZ`
 
 ## 字段
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
 | `status` | `HttpStatus` | HTTP 状态码 |
+
+## 静态方法
+
+### rethrow
+
+`static void rethrow(HttpStatus status, BizException e)`
+
+> 将业务异常重新包装为 Web 业务异常并抛出，保留原始异常码和消息，同时指定 HTTP 状态码
+
+**参数**:
+- `status` (`HttpStatus`) — HTTP 状态码
+- `e` (`BizException`) — 原始业务异常
 
 ## 构造
 
@@ -23,7 +36,7 @@
 | `WebBizException(String code, HttpStatus status, String msgPattern, Object... msgArgs)` | 使用自定义错误码、HTTP 状态码和消息模板构造 |
 | `WebBizException(Throwable throwable)` | 使用异常栈构造，默认 HTTP 500 |
 | `WebBizException(String code, Throwable throwable)` | 使用自定义错误码和异常栈构造 |
-| `WebBizException(String code, Throwable throwable, String msgPattern, Object... msgArgs)` | 使用自定义错误码、异常栈和消息模板构造 |
+| `WebBizException(String code, Throwable throwable, String msgPattern, Object... msgArgs)` | 使用自定义错误码、异常栈和消息模板构造，默认 HTTP 500 |
 | `WebBizException(String code, HttpStatus status, Throwable throwable, String msgPattern, Object... msgArgs)` | 全参数构造 |
 
 ## 方法
@@ -61,4 +74,7 @@ throw new WebBizException(HttpStatus.BAD_REQUEST, "参数 {0} 不能为空", "na
 
 // 包装原始异常
 throw new WebBizException("DB_ERROR", throwable);
+
+// 将 BizException 重新包装为 WebBizException 并抛出
+WebBizException.rethrow(HttpStatus.BAD_REQUEST, bizEx);
 ```
