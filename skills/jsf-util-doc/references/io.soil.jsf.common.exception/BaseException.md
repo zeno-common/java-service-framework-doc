@@ -20,10 +20,10 @@
 |------|------|
 | `BaseException(String msg)` | 使用消息构造 |
 | `BaseException(String msgPattern, Object... msgArgs)` | 使用消息模板构造（MessageFormat 格式化） |
-| `BaseException(Throwable throwable, String msg)` | 使用异常栈和消息构造 |
 | `BaseException(Throwable throwable)` | 使用异常栈构造，消息取 throwable.getMessage() |
+| `BaseException(Throwable throwable, String msg)` | 使用异常栈和消息构造 |
 | `BaseException(Throwable throwable, String msgPattern, Object... msgArgs)` | 使用异常栈和消息模板构造 |
-| `BaseException(String code, String msg)` | 使用异常状态码和消息构造 |
+| `BaseException(String code, Throwable throwable)` | 使用异常状态码和异常栈构造，消息取 throwable.getMessage() |
 | `BaseException(String code, Throwable throwable, String msg)` | 使用异常状态码、异常栈和消息构造 |
 | `BaseException(String code, Throwable throwable, String msgPattern, Object... msgArgs)` | 全参数构造 |
 
@@ -53,7 +53,7 @@
 
 **返回**: `String` — 异常栈字符串（非 debug 模式返回空字符串）
 
-### getStackTraceString
+### getStackTraceString (static)
 
 `static String getStackTraceString(Throwable throwable)`
 
