@@ -10,6 +10,33 @@
 
 `ParamException` 继承自 `BaseException`，`type()` 固定返回 `ExceptionType.PARAM`。当它在 COLA 5 分层架构的 Adapter 层被抛出后，由 Web 层的全局异常处理器统一捕获，转换为标准错误响应（`errType = PARAM`，`errCode = 异常自定义码`，`errDesc = 异常消息`）。
 
+## 静态方法
+
+### of
+
+`static ParamException of(ErrorDefine errorDefine, Object... msgArgs)`
+
+> 根据错误定义创建参数校验异常
+
+**参数**:
+- `errorDefine` (`ErrorDefine`) — 错误定义，提供异常码和消息模板
+- `msgArgs` (`Object...`) — 消息模板参数，用于 `MessageFormat.format` 格式化
+
+**返回**: `ParamException` — 参数校验异常对象
+
+### of
+
+`static ParamException of(Throwable throwable, ErrorDefine errorDefine, Object... msgArgs)`
+
+> 根据错误定义创建参数校验异常，可附带原始异常
+
+**参数**:
+- `throwable` (`Throwable`) — 原始异常，可为 null
+- `errorDefine` (`ErrorDefine`) — 错误定义，提供异常码和消息模板
+- `msgArgs` (`Object...`) — 消息模板参数，用于 `MessageFormat.format` 格式化
+
+**返回**: `ParamException` — 参数校验异常对象
+
 ## 构造
 
 | 签名 | 说明 |
@@ -36,6 +63,15 @@
 ## 示例
 
 ```java
+// 使用 ErrorDefine 枚举
+throw ParamException.of(ParamError.REQUIRED);
+
+// 使用 ErrorDefine 枚举 + 消息模板参数
+throw ParamException.of(ParamError.INVALID, "name");
+
+// 使用 ErrorDefine 枚举 + 原始异常
+throw ParamException.of(cause, ParamError.FORMAT);
+
 // 直接使用
 throw new ParamException("参数不能为空");
 
