@@ -16,13 +16,13 @@
 
 ### of
 
-`static WebBizException of(BizException e, HttpStatus status)`
+`static WebBizException of(HttpStatus status, BizException e)`
 
 > 将业务异常重新包装为 Web 业务异常，保留原始异常码和消息，同时指定 HTTP 状态码
 
 **参数**:
-- `e` (`BizException`) — 原始业务异常
 - `status` (`HttpStatus`) — HTTP 状态码
+- `e` (`BizException`) — 原始业务异常
 
 **返回**: `WebBizException` — 包装后的 Web 业务异常对象
 
@@ -73,6 +73,6 @@ throw new WebBizException(HttpStatus.BAD_REQUEST, "参数 {0} 不能为空", "na
 throw new WebBizException("DB_ERROR", throwable);
 
 // 将 BizException 重新包装为 WebBizException
-WebBizException wrapped = WebBizException.of(bizEx, HttpStatus.BAD_REQUEST);
+WebBizException wrapped = WebBizException.of(HttpStatus.BAD_REQUEST, bizEx);
 throw wrapped;
 ```
