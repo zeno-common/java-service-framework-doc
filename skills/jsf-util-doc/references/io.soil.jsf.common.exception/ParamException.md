@@ -4,6 +4,7 @@
 
 - **包**: io.soil.jsf.common.exception
 - **父类**: `BaseException`
+- **修饰**: `final`
 - **异常类型**: `ExceptionType.PARAM`
 
 ## 说明

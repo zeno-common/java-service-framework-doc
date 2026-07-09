@@ -4,6 +4,7 @@
 
 - **包**: io.soil.jsf.wsf.exception
 - **父类**: `BizException`（io.soil.jsf.common.exception）
+- **修饰**: `final`
 - **异常类型**: `ExceptionType.BIZ`
 
 ## 字段
