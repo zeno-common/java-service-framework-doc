@@ -32,12 +32,12 @@
 |------|------|
 | `WebBizException(HttpStatus status, String msg)` | 使用 HTTP 状态码和消息构造，code 取 status.name() |
 | `WebBizException(HttpStatus status, String msgPattern, Object... msgArgs)` | 使用 HTTP 状态码和消息模板构造，code 取 status.name() |
-| `WebBizException(String code, HttpStatus status, String msg)` | 使用自定义错误码、HTTP 状态码和消息构造 |
-| `WebBizException(String code, HttpStatus status, String msgPattern, Object... msgArgs)` | 使用自定义错误码、HTTP 状态码和消息模板构造 |
+| `WebBizException(HttpStatus status, String code, String msg)` | 使用 HTTP 状态码、自定义错误码和消息构造 |
+| `WebBizException(HttpStatus status, String code, String msgPattern, Object... msgArgs)` | 使用 HTTP 状态码、自定义错误码和消息模板构造 |
 | `WebBizException(Throwable throwable)` | 使用异常栈构造，默认 HTTP 500，code 取 500 状态名 |
 | `WebBizException(String code, Throwable throwable)` | 使用自定义错误码和异常栈构造，默认 HTTP 500 |
 | `WebBizException(String code, Throwable throwable, String msgPattern, Object... msgArgs)` | 使用自定义错误码、异常栈和消息模板构造，默认 HTTP 500 |
-| `WebBizException(String code, HttpStatus status, Throwable throwable, String msgPattern, Object... msgArgs)` | 全参数构造 |
+| `WebBizException(HttpStatus status, String code, Throwable throwable, String msgPattern, Object... msgArgs)` | 全参数构造 |
 
 ## 方法
 
@@ -64,7 +64,7 @@
 throw new WebBizException(HttpStatus.BAD_REQUEST, "参数错误");
 
 // 自定义错误码 + HTTP 状态码
-throw new WebBizException("USER_NOT_FOUND", HttpStatus.NOT_FOUND, "用户不存在");
+throw new WebBizException(HttpStatus.NOT_FOUND, "USER_NOT_FOUND", "用户不存在");
 
 // 消息模板
 throw new WebBizException(HttpStatus.BAD_REQUEST, "参数 {0} 不能为空", "name");

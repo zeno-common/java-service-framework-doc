@@ -33,31 +33,31 @@
 
 **默认值**: `errType` = `ExceptionType.PARAM`, `errCode` = `HttpStatus.BAD_REQUEST.name()`, `errDesc` = 字段错误消息（分号分隔）
 
-### handleWebException (WebBizException)
+### handleBaseException (WebBizException)
 
-`ResponseEntity<RestExceptionResponse> handleWebException(WebBizException e)`
+`ResponseEntity<RestExceptionResponse> handleBaseException(WebBizException e)`
 
-> 处理 WSF 自定义异常
+> 处理 Web 业务自定义异常（如数据冲突等，在 Service 层进行业务校验时抛出）
 
 **参数**:
-- `e` (`WebBizException`) — WSF 异常对象
+- `e` (`WebBizException`) — Web 业务异常对象
 
 **返回**: `ResponseEntity<RestExceptionResponse>` — 包含异常信息的 HTTP 响应，状态码由异常对象决定
 
-### handleWebException (BaseException)
+### handleBaseException (BaseException)
 
-`ResponseEntity<RestExceptionResponse> handleWebException(BaseException e)`
+`ResponseEntity<RestExceptionResponse> handleBaseException(BaseException e)`
 
-> 处理 BaseException 异常
+> 处理 BaseException 自定义异常
 
 **参数**:
-- `e` (`BaseException`) — 异常对象
+- `e` (`BaseException`) — 自定义异常对象
 
 **返回**: `ResponseEntity<RestExceptionResponse>` — 包含异常信息的 HTTP 响应，状态码固定为 500
 
-### handleWebException (Throwable)
+### handleBaseException (Throwable)
 
-`ResponseEntity<RestExceptionResponse> handleWebException(Throwable throwable)`
+`ResponseEntity<RestExceptionResponse> handleBaseException(Throwable throwable)`
 
 > 处理所有未捕获的异常
 
@@ -74,7 +74,7 @@
 // errType = PARAM, errCode = 异常自定义码, errDesc = 异常消息
 
 // 抛出 WebBizException 时，自动返回 RestExceptionResponse 格式 JSON
-// 状态码由 WebBizException.getStatus() 决定
+// 状态码由 WebBizException.status() 决定
 
 // @Valid / @Validated 校验失败时，自动返回 HTTP 400 + RestExceptionResponse
 // errType = PARAM, errDesc = 字段错误消息
