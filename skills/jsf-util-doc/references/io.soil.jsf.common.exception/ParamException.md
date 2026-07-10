@@ -11,18 +11,40 @@
 
 `ParamException` 继承自 `BaseException`，`type()` 固定返回 `ExceptionType.PARAM`。当它在 COLA 5 分层架构的 Adapter 层被抛出后，由 Web 层的全局异常处理器统一捕获，转换为标准错误响应（`errType = PARAM`，`errCode = 异常自定义码`，`errDesc = 异常消息`）。
 
+推荐通过 `of(Error, Object...)` 静态工厂方法创建实例，配合实现 `Error` 接口的枚举使用。
+
+## 静态方法
+
+### of
+
+`static ParamException of(Error error, Object... descArgs)`
+
+> 根据错误定义和描述参数构造参数校验异常（无原始原因）
+
+**参数**:
+- `error` (`Error`) — 错误定义（提供 code 和 desc 模板）
+- `descArgs` (`Object...`) — 描述模板参数（MessageFormat 格式化）
+
+**返回**: `ParamException` — 参数校验异常实例
+
+### of (with cause)
+
+`static ParamException of(Throwable cause, Error error, Object... descArgs)`
+
+> 根据错误定义、原始原因和描述参数构造参数校验异常
+
+**参数**:
+- `cause` (`Throwable`) — 原始异常原因
+- `error` (`Error`) — 错误定义（提供 code 和 desc 模板）
+- `descArgs` (`Object...`) — 描述模板参数（MessageFormat 格式化）
+
+**返回**: `ParamException` — 参数校验异常实例
+
 ## 构造
 
 | 签名 | 说明 |
 |------|------|
-| `ParamException(String msg)` | 使用消息构造 |
-| `ParamException(String msgPattern, Object... msgArgs)` | 使用消息模板（MessageFormat）构造 |
-| `ParamException(Throwable throwable)` | 使用原始异常构造，消息取 `throwable.getMessage()` |
-| `ParamException(Throwable throwable, String msg)` | 使用原始异常与消息构造 |
-| `ParamException(Throwable throwable, String msgPattern, Object... msgArgs)` | 使用原始异常与消息模板构造 |
-| `ParamException(String code, Throwable throwable)` | 使用自定义异常码与原始异常构造 |
-| `ParamException(String code, Throwable throwable, String msg)` | 使用自定义异常码、原始异常与消息构造 |
-| `ParamException(String code, Throwable throwable, String msgPattern, Object... msgArgs)` | 使用自定义异常码、原始异常与消息模板构造 |
+| `ParamException(String code, Throwable throwable, String msgPattern, Object... msgArgs)` | 全参数构造（private） |
 
 ## 方法
 
@@ -37,15 +59,21 @@
 ## 示例
 
 ```java
-// 直接使用
-throw new ParamException("参数不能为空");
+// 定义参数错误码枚举
+public enum ParamError implements Error {
+    INVALID("PARAM-INVALID", "参数 {0} 不合法"),
+    NOT_NULL("PARAM-NOT-NULL", "参数 {0} 不能为空");
 
-// 使用消息模板
-throw new ParamException("参数 {0} 不合法", paramName);
+    private final String code;
+    private final String desc;
+    ParamError(String code, String desc) { this.code = code; this.desc = desc; }
+    @Override public String code() { return code; }
+    @Override public String desc() { return desc; }
+}
 
-// 包装原始异常
-throw new ParamException(cause, "参数解析失败");
+// 通过 Error 枚举构造（推荐）
+throw ParamException.of(ParamError.NOT_NULL, "name");
 
-// 自定义异常码
-throw new ParamException("USER-PARAM-INVALID", cause, "用户参数错误");
+// 带原始异常
+throw ParamException.of(cause, ParamError.INVALID, "age");
 ```

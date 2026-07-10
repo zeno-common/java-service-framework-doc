@@ -28,6 +28,7 @@ Maven 工程的依赖引入参考：'[jsf-bom-doc/SKILL.md](../jsf-bom-doc/SKILL
 | 类 | 说明 | 文档 |
 |----|------|------|
 
+| `Error` | 错误定义接口，类型安全地定义错误码与描述 | [Error](references/io.soil.jsf.common.exception/Error.md) |
 | `ExceptionType` | 异常类型枚举，对应 COLA 5 分层架构异常分类 | [ExceptionType](references/io.soil.jsf.common.exception/ExceptionType.md) |
 | `BaseException` | 异常基类 | [BaseException](references/io.soil.jsf.common.exception/BaseException.md) |
 | `BizException` | 业务异常，Domain/App 层业务规则违规时抛出（type = BIZ） | [BizException](references/io.soil.jsf.common.exception/BizException.md) |
