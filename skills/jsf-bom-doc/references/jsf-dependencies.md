@@ -49,7 +49,7 @@
 | `org.springframework.cloud` | `spring-cloud-dependencies` | 2025.0.3 |
 | `com.alibaba.cloud` | `spring-cloud-alibaba-dependencies` | 2025.0.0.0 |
 
-### JSF 内部模块（经 jsf-common-dependencies）
+### JSF 内部模块（经 jsf-tools-dependencies）
 
 | groupId | artifactId | 版本 |
 |---------|-----------|------|
@@ -59,7 +59,7 @@
 | `io.soil.jsf` | `jsf-leaf-id` | 0.0.1 |
 | `io.soil.jsf` | `jsf-unit-test` | 0.0.1 |
 
-### JSF 组件模块（经 jsf-components-dependencies）
+### JSF 组件模块（经 jsf-common-dependencies）
 
 | groupId | artifactId | 版本 |
 |---------|-----------|------|
@@ -81,7 +81,7 @@
 |---------|-----------|------|
 | `org.redisson` | `redisson-spring-boot-starter` | 3.49.0 |
 
-### 工具库（经 jsf-tools-dependencies）
+### 工具库（jsf-dependencies 直接管理）
 
 | groupId | artifactId | 版本 |
 |---------|-----------|------|
