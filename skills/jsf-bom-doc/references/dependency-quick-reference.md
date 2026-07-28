@@ -10,7 +10,7 @@
 | 分布式唯一 ID | ``io.soil.jsf`` | ``jsf-leaf-id`` | 0.0.1 |
 | 单元测试工具 | ``io.soil.jsf`` | ``jsf-unit-test`` | 0.0.1 |
 
-## JSF 组件模块（jsf-components）
+## JSF 公共模块（jsf-common）
 
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
