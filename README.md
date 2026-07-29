@@ -11,6 +11,7 @@ JSF（Java Service Framework）Agent Skills 集合，为 AI 编码助手提供�
 | `jsf-util-doc` | 通用工具类：URL 分页、JSON 映射、日期时间、树结构、集合操作、IP 查询、Spring 上下文 | `pnpm dlx skills add https://github.com/zeno-common/java-service-framework-doc --skill jsf-util-doc` |
 | `jsf-wsf-doc` | WSF 框架：全局异常处理、Jackson 配置、健康探针、客户端 IP 解析 | `pnpm dlx skills add https://github.com/zeno-common/java-service-framework-doc --skill jsf-wsf-doc` |
 | `jsf-unit-test-doc` | 单元测试工具：YAML 配置加载、JUnit 5 / Mockito 依赖传递 | `pnpm dlx skills add https://github.com/zeno-common/java-service-framework-doc --skill jsf-unit-test-doc` |
+| `jsf-mq-doc` | 消息中间件：RocketMQ 统一生产者/消费者基类、Outbox 可靠发送、消费幂等、失败重放 | `pnpm dlx skills add https://github.com/zeno-common/java-service-framework-doc --skill jsf-mq-doc` |
 
 ## 快速安装
 
@@ -85,6 +86,14 @@ JSF 单元测试工具模块，提供 YAML 配置加载和测试依赖传递：
 
 - 引入 `jsf-unit-test`（test scope）自动获得 JUnit 5 + Mockito
 - `YamlPropertySourceFactory` — 在轻量级测试上下文中加载 YAML 配置
+
+### jsf-mq-doc
+
+基于 RocketMQ 5.5 封装的消息中间件模块：
+
+- 统一生产者（同步/异步/单向/延迟）与消费者基类（三态结果 + 可选幂等）
+- Outbox 可靠发送（事务内落库 + 提交后投递 + relay 兜底）
+- 消费失败落库与手动/定时重放
 
 ## 目录结构
 

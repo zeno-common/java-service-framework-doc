@@ -64,6 +64,8 @@
 | groupId | artifactId | 版本 |
 |---------|-----------|------|
 | `io.soil.jsf` | `jsf-mongodb` | 0.0.1 |
+| `io.soil.jsf` | `jsf-mq-core` | 0.0.1 |
+| `io.soil.jsf` | `jsf-mq-mongodb` | 0.0.1 |
 
 ### 数据库 / ORM（经 jsf-jdbc-dependencies）
 

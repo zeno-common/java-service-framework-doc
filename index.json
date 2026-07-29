@@ -35,6 +35,13 @@
       "description": "Use when coding with jsf-unit-test SDK, need API reference for YAML property loading in tests, or JUnit 5 / Mockito test dependencies.",
       "url": "skills/jsf-unit-test-doc/SKILL.md",
       "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "jsf-mq-doc",
+      "type": "skill-md",
+      "description": "Use when coding with jsf-mq SDK, need API reference for RocketMQ unified producer, consumer base class, outbox reliable delivery, consume idempotency, and consume failure replay.",
+      "url": "skills/jsf-mq-doc/SKILL.md",
+      "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
     }
   ]
 }

@@ -15,6 +15,8 @@
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
 | MongoDB 通用类 | ``io.soil.jsf`` | ``jsf-mongodb`` | 0.0.1 |
+| 消息中间件核心（RocketMQ） | ``io.soil.jsf`` | ``jsf-mq-core`` | 0.0.1 |
+| 消息中间件 MongoDB 存储实现 | ``io.soil.jsf`` | ``jsf-mq-mongodb`` | 0.0.1 |
 
 ## Spring 生态
 
