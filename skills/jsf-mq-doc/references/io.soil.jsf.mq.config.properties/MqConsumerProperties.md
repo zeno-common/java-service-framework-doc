@@ -10,7 +10,7 @@
 | 字段 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
 | `nameServer` | String | 127.0.0.1:9876 | 消费者侧 RocketMQ NameServer（`@Value` 读取 `rocketmq.name-server` 回退） |
-| `enabled` | boolean | true | 是否启用消费者（本地开发可关闭避免连接 RocketMQ） |
+| `enabled` | boolean | true | 是否启用消费者（本地开发可关闭避免连接 RocketMQ）；设为 false 时 `MqConsumerAutoConfig` 与 `MqMongoConsumeAutoConfig` 整组不装配 |
 
 ## 配置示例
 
