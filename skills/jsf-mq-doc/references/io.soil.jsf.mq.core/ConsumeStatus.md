@@ -10,5 +10,5 @@
 | 值 | 说明 |
 |----|------|
 | `SUCCESS` | 消费成功，正常 ack 确认 |
-| `RETRY_LATER` | 稍后重试：抛 MqException 触发 broker 重试（指数退避，默认 16 次后进入 %DLQ%+group 死信队列），适用瞬时故障 |
+| `RETRY_LATER` | 稍后重试：抛 MqConsumerException 触发 broker 重试（指数退避，默认 16 次后进入 %DLQ%+group 死信队列），适用瞬时故障 |
 | `DISCARD` | 丢弃不重试：判定不可重试失败，交 MqConsumeFailureHandler 落库供重放 |

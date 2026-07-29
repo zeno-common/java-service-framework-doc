@@ -13,7 +13,6 @@ Maven 工程的依赖引入参考：'[jsf-bom-doc/SKILL.md](../jsf-bom-doc/SKILL
 
 | ArtifactId | 说明 |
 |-----------|------|
-| `jsf-mq-common` | 共享基础：统一异常、配置属性（被 producer/consumer 传递依赖，通常无需显式声明） |
 | `jsf-mq-producer` | 生产者侧：统一生产者 API、Outbox 可靠发送 |
 | `jsf-mq-consumer` | 消费者侧：消费者基类、失败落库重放、幂等抽象 |
 | `jsf-mq-producer-mongodb` | 生产者可靠性 MongoDB 实现（Outbox 的 Store） |
@@ -60,7 +59,10 @@ Maven 工程的依赖引入参考：'[jsf-bom-doc/SKILL.md](../jsf-bom-doc/SKILL
 
 | 类 | 包 | 说明 | 文档 |
 |----|-----|------|------|
-| `MqProperties` | `io.soil.jsf.mq.config.properties` | 配置属性（`jsf.mq` 前缀） | [MqProperties](references/io.soil.jsf.mq.config.properties/MqProperties.md) |
-| `MqProducerAutoConfig` / `MqConsumerAutoConfig` / `MqPropertiesAutoConfig` | `io.soil.jsf.mq.config` | 自动配置（按 Store Bean 条件装配，分别位于 jsf-mq-producer / jsf-mq-consumer / jsf-mq-common） | [MqAutoConfig](references/io.soil.jsf.mq.config/MqAutoConfig.md) |
-| `MqException` | `io.soil.jsf.mq.exception` | 统一异常（发送/消费失败） | [MqException](references/io.soil.jsf.mq.exception/MqException.md) |
+| `MqProducerProperties` | `io.soil.jsf.mq.config.properties` | 生产者侧配置属性（前缀 `jsf.mq.producer`，含 outbox 段） | [MqProducerProperties](references/io.soil.jsf.mq.config.properties/MqProducerProperties.md) |
+| `MqConsumerProperties` | `io.soil.jsf.mq.config.properties` | 消费者侧配置属性（前缀 `jsf.mq.consumer`） | [MqConsumerProperties](references/io.soil.jsf.mq.config.properties/MqConsumerProperties.md) |
+| `MqProducerAutoConfig` | `io.soil.jsf.mq.config` | 生产者自动配置（注册 MqProducer / MqOutbox / MqOutboxRelay） | [MqProducerAutoConfig](references/io.soil.jsf.mq.config/MqProducerAutoConfig.md) |
+| `MqConsumerAutoConfig` | `io.soil.jsf.mq.config` | 消费者自动配置（注册 MqConsumeFailureHandler） | [MqConsumerAutoConfig](references/io.soil.jsf.mq.config/MqConsumerAutoConfig.md) |
+| `MqProducerException` | `io.soil.jsf.mq.exception` | 生产者侧异常（发送失败 / 生产者不可用） | [MqProducerException](references/io.soil.jsf.mq.exception/MqProducerException.md) |
+| `MqConsumerException` | `io.soil.jsf.mq.exception` | 消费者侧异常（消费失败，触发 broker 重试） | [MqConsumerException](references/io.soil.jsf.mq.exception/MqConsumerException.md) |
 

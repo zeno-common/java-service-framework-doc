@@ -6,7 +6,7 @@
 
 ## 启用
 
-依赖应用开启 `@EnableScheduling`；扫描间隔由 `jsf.mq.outbox.relay.interval` 控制（默认 5000ms）。
+依赖应用开启 `@EnableScheduling`；扫描间隔由 `jsf.mq.producer.outbox.relay.interval` 控制（默认 5000ms）。
 
 ## 方法
 

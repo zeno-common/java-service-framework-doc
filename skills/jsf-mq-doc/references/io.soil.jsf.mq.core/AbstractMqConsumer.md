@@ -34,7 +34,7 @@ public class OrderConsumer extends AbstractMqConsumer<OrderCreatedEvent> {
 | 返回值 | 基类行为 | 适用场景 |
 |--------|----------|----------|
 | `SUCCESS`（或 null） | ack 确认；幂等 markProcessed | 正常 |
-| `RETRY_LATER` | 抛 MqException 触发 broker 重试（16 次后进 %DLQ%+group）；幂等 release | 瞬时故障 |
+| `RETRY_LATER` | 抛 MqConsumerException 触发 broker 重试（16 次后进 %DLQ%+group）；幂等 release | 瞬时故障 |
 | `DISCARD` | 不重试；MqConsumeFailureHandler 落库；幂等 release | 不可重试失败 |
 
 处理逻辑抛出的异常默认按 `RETRY_LATER` 处理。

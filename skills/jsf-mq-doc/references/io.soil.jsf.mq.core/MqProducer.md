@@ -1,6 +1,6 @@
 # MqProducer
 
-> 统一消息生产者，封装 RocketMQTemplate 的同步/异步/单向/延迟四类发送，异常统一包装为 MqException
+> 统一消息生产者，封装 RocketMQTemplate 的同步/异步/单向/延迟四类发送，异常统一包装为 MqProducerException
 
 - **包**: io.soil.jsf.mq.core
 - **父类**: 无（普通类）
@@ -25,7 +25,7 @@
 
 **返回**: SendResult — 发送结果
 
-**异常**: `MqException` — 发送失败（保留原始异常链）
+**异常**: `MqProducerException` — 发送失败（保留原始异常链）
 
 **示例**:
 ```java
@@ -36,13 +36,13 @@ SendResult r = mqProducer.send("order-topic", new OrderCreatedEvent(id));
 
 `void sendAsync(String destination, Object payload, Consumer<SendResult> onSuccess)`
 
-> 异步发送（仅成功回调，异常包装为 MqException 抛出）
+> 异步发送（仅成功回调，异常包装为 MqProducerException 抛出）
 
 **参数**: 见 `send`；`onSuccess` — 成功回调
 
-**异常**: `MqException` — 异步发送异常
+**异常**: `MqProducerException` — 异步发送异常
 
-另有重载 `sendAsync(destination, payload, onSuccess, onError)` 分离成功/失败回调（onError 入参为包装后的 `MqException`）。
+另有重载 `sendAsync(destination, payload, onSuccess, onError)` 分离成功/失败回调（onError 入参为包装后的 `MqProducerException`）。
 
 ### sendOneway
 
@@ -58,4 +58,4 @@ SendResult r = mqProducer.send("order-topic", new OrderCreatedEvent(id));
 
 **参数**: `delayLevel` (int) — RocketMQ 延迟级别
 
-**异常**: `MqException` — 发送失败
+**异常**: `MqProducerException` — 发送失败

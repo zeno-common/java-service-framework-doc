@@ -64,7 +64,7 @@
 | groupId | artifactId | 版本 |
 |---------|-----------|------|
 | `io.soil.jsf` | `jsf-mongodb` | 0.0.1 |
-| `io.soil.jsf` | `jsf-mq-common` | 0.0.1 |
+
 | `io.soil.jsf` | `jsf-mq-producer` | 0.0.1 |
 | `io.soil.jsf` | `jsf-mq-consumer` | 0.0.1 |
 | `io.soil.jsf` | `jsf-mq-producer-mongodb` | 0.0.1 |
