@@ -3,7 +3,7 @@
 > 抽象消息消费者基类：子类声明 @RocketMQMessageListener 并实现 handleMessage 返回三态结果，基类负责 ack / broker 重试 / 失败落库与幂等编排
 
 - **包**: io.soil.jsf.mq.core
-- **实现**: `RocketMQListener<T>`
+- **实现**: `RocketMQListener<MessageExt>`
 
 ## 用法
 
@@ -16,14 +16,14 @@ public class OrderConsumer extends AbstractMqConsumer<OrderCreatedEvent> {
     private OrderService orderService;
 
     @Override
-    protected ConsumeStatus handleMessage(OrderCreatedEvent msg) throws Exception {
+    protected ConsumeStatus handleMessage(OrderCreatedEvent msg, MqConsumeContext ctx) throws Exception {
         orderService.process(msg);
         return ConsumeStatus.SUCCESS;
     }
 
     // 可选：启用幂等（需容器存在 MqIdempotentStore 实现）
     @Override
-    protected String idempotentKey(OrderCreatedEvent msg) {
+    protected String idempotentKey(OrderCreatedEvent msg, MqConsumeContext ctx) {
         return msg.getOrderId();
     }
 }
@@ -43,13 +43,13 @@ public class OrderConsumer extends AbstractMqConsumer<OrderCreatedEvent> {
 
 ### handleMessage
 
-`protected abstract ConsumeStatus handleMessage(T message) throws Exception`
+`protected abstract ConsumeStatus handleMessage(T message, MqConsumeContext ctx) throws Exception`
 
 > 业务处理，返回消费结果三态（返回 null 视为 SUCCESS）
 
 ### idempotentKey
 
-`protected String idempotentKey(T message)`
+`protected String idempotentKey(T message, MqConsumeContext ctx)`
 
 > 幂等键（默认 null 不启用）。返回非空值且容器存在 MqIdempotentStore 时自动启用幂等去重
 
