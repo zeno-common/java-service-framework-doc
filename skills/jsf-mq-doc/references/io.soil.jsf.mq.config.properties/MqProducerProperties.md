@@ -1,6 +1,6 @@
 # MqProducerProperties
 
-> 生产者侧配置属性，前缀 `jsf.mq.producer`；NameServer 默认读取 rocketmq.name-server，未配置回退 127.0.0.1:9876
+> 生产者侧配置属性，前缀 `jsf.mq.producer`；
 
 - **包**: io.soil.jsf.mq.config.properties
 - **注解**: `@ConfigurationProperties(prefix = "jsf.mq.producer")`
@@ -10,7 +10,6 @@
 | 字段 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
 | `enabled` | boolean | true | 是否启用生产者（本地开发可关闭避免连接 RocketMQ）；设为 false 时 `MqProducerAutoConfig` 与 `MqMongoOutboxAutoConfig` 整组不装配 |
-| `nameServer` | String | 127.0.0.1:9876 | 生产者侧 RocketMQ NameServer（`@Value` 读取 `rocketmq.name-server` 回退） |
 | `group` | String | jsf-mq-producer | 默认生产者组 |
 | `outbox.immediateSend` | boolean | true | 事务提交后立即投递（false 则纯 relay 轮询） |
 | `outbox.maxAttempts` | int | 16 | 最大发送尝试，耗尽后置 FAILED（人工介入） |
