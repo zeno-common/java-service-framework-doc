@@ -15,8 +15,11 @@
 | 功能 | groupId | artifactId | 版本 |
 |------|---------|-----------|------|
 | MongoDB 通用类 | ``io.soil.jsf`` | ``jsf-mongodb`` | 0.0.1 |
-| 消息中间件核心（RocketMQ） | ``io.soil.jsf`` | ``jsf-mq-core`` | 0.0.1 |
-| 消息中间件 MongoDB 存储实现 | ``io.soil.jsf`` | ``jsf-mq-mongodb`` | 0.0.1 |
+| 消息中间件共享基础（异常/配置） | ``io.soil.jsf`` | ``jsf-mq-common`` | 0.0.1 |
+| 消息中间件生产者（API/Outbox） | ``io.soil.jsf`` | ``jsf-mq-producer`` | 0.0.1 |
+| 消息中间件消费者（基类/失败重放/幂等） | ``io.soil.jsf`` | ``jsf-mq-consumer`` | 0.0.1 |
+| 消息中间件 Outbox MongoDB 实现 | ``io.soil.jsf`` | ``jsf-mq-producer-mongodb`` | 0.0.1 |
+| 消息中间件消费可靠性 MongoDB 实现 | ``io.soil.jsf`` | ``jsf-mq-consumer-mongodb`` | 0.0.1 |
 
 ## Spring 生态
 
