@@ -13,12 +13,10 @@ Maven 工程的依赖引入参考：'[jsf-bom-doc/SKILL.md](../jsf-bom-doc/SKILL
 
 | ArtifactId | 说明 |
 |-----------|------|
-| `jsf-mq-producer` | 生产者侧：统一生产者 API、Outbox 可靠发送 |
-| `jsf-mq-consumer` | 消费者侧：消费者基类、失败落库重放、幂等抽象 |
-| `jsf-mq-producer-mongodb` | 生产者可靠性 MongoDB 实现（Outbox 的 Store） |
-| `jsf-mq-consumer-mongodb` | 消费者可靠性 MongoDB 实现（幂等 / 失败记录的 Store） |
+| `jsf-mq-core` | 生产者与消费者核心：统一生产者 API、Outbox 可靠发送、消费者基类、失败落库重放、幂等抽象 |
+| `jsf-mq-mongodb` | 可靠性 MongoDB 实现（Outbox / 幂等 / 失败记录的 Store） |
 
-> 仅引入 `jsf-mq-producer` + `jsf-mq-consumer` 也能发/收消息；引入对应 `jsf-mq-*-mongodb` 后，`MqOutbox` / `MqOutboxRelay` / `MqConsumeFailureHandler` 才会被条件装配（见各自动配置类）。
+> 仅引入 `jsf-mq-core` 即可发/收消息；引入 `jsf-mq-mongodb` 后，`MqOutbox` / `MqOutboxRelay` / `MqConsumeFailureHandler` 才会被条件装配（见各自动配置类）。
 
 ## 类索引
 

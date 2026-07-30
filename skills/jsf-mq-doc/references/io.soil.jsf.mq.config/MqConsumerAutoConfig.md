@@ -9,6 +9,6 @@
 
 | Bean | 条件 | 说明 |
 |------|------|------|
-| `mqConsumeFailureHandler` | 容器存在 `MqConsumeFailureStore`（引入 jsf-mq-consumer-mongodb） | 消费失败处理（落库 + 重放） |
+| `mqConsumeFailureHandler` | 容器存在 `MqConsumeFailureStore`（引入 jsf-mq-mongodb） | 消费失败处理（落库 + 重放） |
 
 Bean 标注 `@ConditionalOnMissingBean`，业务可自定义实现覆盖。
